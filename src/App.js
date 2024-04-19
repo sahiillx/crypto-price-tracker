@@ -5,20 +5,23 @@ import Coins from "./components/Coins";
 import Exchanges from "./components/Exchanges";
 import CoinDetails from "./components/CoinDetails";
 import Footer from "./components/Footer";
+import "./App.css";
 
 function App() {
   return (
-    <Router>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/coins" element={<Coins />} />
-        <Route path="/exchanges" element={<Exchanges />} />
-        <Route path="/coin/:id" element={<CoinDetails />} />
-      </Routes>
+    <div className="app">
+      <Router>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/coins" element={<Coins />} />
+          <Route path="/exchanges" element={<Exchanges />} />
+          <Route path="/coin/:id" element={<CoinDetails />} />
+        </Routes>
 
-      <Footer />
-    </Router>
+        <Footer />
+      </Router>
+    </div>
   );
 }
 
